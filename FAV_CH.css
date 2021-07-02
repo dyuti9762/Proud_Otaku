@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.header
+{
+    height: max-content;
+    background-image: url(ch-b.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    
+    background-size: cover;
+    
+    overflow:auto;
+    
+    
+    min-height: 100%;
+    height: 100%;
+}
+.otaku
+{
+    color: rgb(192, 62, 62);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background: url(button_b.gif);
+    background-size: auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 5vw;
+    text-align:left;
+    
+}
+.touch{
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family:cursive;
+}
+.container {
+    height: 100%;
+  }
+  .gallery {
+    list-style-type: none;
+    height: 100%;
+    overflow: hidden;
+    margin-left: -200;
+  }
+  .gallery li {
+    float: left;
+    height: 100%;
+    width: 400px;
+    background: #2E4053;
+  }
+  .gallery .flip {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    perspective: 2000px;
+  }
+  .gallery li:hover .front-side {
+    opacity: 0;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .gallery li:hover .back-side {
+    background: #000;
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  .gallery .front-side,
+  .gallery .back-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility:  hidden;
+    -moz-backface-visibility:  hidden;
+    backface-visibility:  hidden;
+  
+    -webkit-transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+    -moz-transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+    transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+  }
+  .gallery .front-side {
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  .gallery .back-side {
+    opacity: 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+  .gallery .back-side > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .gallery li:nth-child(1) .front-side {
+    background-image:url('Itachi_fav.jpg');
+  }
+  .gallery li:nth-child(1) .loader {
+    border-top-color: #a70f0f;
+    border-left-color: #a70f0f;
+  }
+  .gallery li:nth-child(1) .text h3 {
+    color: #a70f0f;
+  }
+  .gallery li:nth-child(1) .text h3:after {
+    background: #a70f0f;
+  }
+  
+  .gallery li:nth-child(2) .front-side {
+    background-image: url('Naruto_fav.jpg');
+  }
+  .gallery li:nth-child(2) .loader {
+    border-top-color: #E74C3C;
+    border-left-color: #E74C3C;
+  }
+  .gallery li:nth-child(2) .text h3 {
+    color: #E74C3C;
+  }
+  .gallery li:nth-child(2) .text h3:after {
+    background: #EC7063;
+  }
+  
+  .gallery li:nth-child(3) .front-side {
+    background-image: url('https://i.pinimg.com/originals/3f/a0/30/3fa0305539fb40631b4c180fa2d0d972.jpg');
+  }
+  .gallery li:nth-child(3) .loader {
+    border-top-color: #04a87f;
+    border-left-color: #04a87f;
+  }
+  .gallery li:nth-child(3) .text h3 {
+    color: #04a87f;
+  }
+  .gallery li:nth-child(3) .text h3:after {
+    background: #04a87f;
+  }
+  
+  .gallery li:nth-child(4) .front-side {
+    background-image: url('BAKUGO_FAV.jpg');
+  }
+  .gallery li:nth-child(4) .loader {
+    border-top-color: #F1C40F;
+    border-left-color: #F1C40F;
+  }
+  .gallery li:nth-child(4) .text h3 {
+    color: #F1C40F;
+  }
+  .gallery li:nth-child(4) .text h3:after {
+    background: #F7DC6F;
+  }
+  
+  .gallery li:nth-child(5) .front-side {
+    background-image: url('erza.png');
+  }
+  .gallery li:nth-child(5) .loader {
+    border-top-color: #e61313;
+    border-left-color: #e61313;
+  }
+  .gallery li:nth-child(5) .text h3 {
+    color: #e61313;
+  }
+  .gallery li:nth-child(5) .text h3:after {
+    background: #e61313;
+  }
+  
+  
+  .gallery .content {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 25px 20px;
+  }
+  
+  .gallery li:hover .text {
+    opacity: 1;
+    visibility: visible;
+    max-height: 2000px;
+    -webkit-transition: opacity .3s ease-in 1.5s, max-height .1s ease 1.5s;
+    -moz-transition: opacity .3s ease-in 1.5s, max-height .1s ease 1.5s;
+    transition: opacity .3s ease-in 1.5s, max-height .1s ease 1.5s;
+  }
+  .gallery li:hover .loader {
+    opacity: 1;
+    visibility: visible;
+    -webkit-animation: hide .1s ease-in-out 1.4s forwards, load .75s infinite;
+    -moz-animation: hide .1s ease-in-out 1.4s forwards, load .75s infinite;
+    animation: hide .1s ease-in-out 1.4s forwards, load .75s infinite;
+  }
+  .gallery .text {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+  .gallery .content h3 {
+    position: relative;
+    color: #3498DB;
+    font: normal 30px/1.25 'Open Sans';
+    margin-bottom: 25px;
+  }
+  .gallery .content h3:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -25px;
+    background: #85C1E9;
+  }
+  .gallery .content p {
+    margin: 10px 0;
+    color: #D6DBDF;
+    font: normal 16px/1.25 'Open Sans';
+  }
+  .gallery .loader {
+    opacity: 0;
+    visibility: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #3498DB;
+    border-left-color: #3498DB;
+  }
+  
+  @-webkit-keyframes load {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes load {
+    0% {
+      -moz-transform: rotate(0deg);
+    }
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @keyframes load {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes hide {
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  @-moz-keyframes hide {
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  @keyframes hide {
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }

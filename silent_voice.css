@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.header
+{
+    height: 140vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(silent_b.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    
+    background-size: cover;
+}
+    
+body {
+    margin-top: -20,;
+    overflow:auto;
+    overflow-x: hidden;
+}
+text {
+    color: blanchedalmond;
+    font-size: 18;
+    font-weight: bold;
+}
+
+p {
+    text-align:left;
+    font-size: 15px;
+    color: blanchedalmond;
+    margin-right: 5;
+    font-weight: bold;
+}
+.image {
+    float: right; 
+    margin: 5px;
+    margin-top: -350;
+}
+.tree{
+    margin-left: 100;
+    margin-top: -30;
+    margin-right: 50;
+}
+.tree ul {
+	padding-top: 20px; position: relative;
+}
+
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.tree li a{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	
+}
+
+.list{
+    color: rgb(250, 250, 250);
+    margin-left: 100;
+}
+.list ol{
+	padding-top: 20px; position: relative;
+}
+
+.list li {
+	list-style-type:decimal;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	
+}
+.list h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+}
+.square h1{
+    color: ivory;
+    font-family: cursive;
+}
+.text1{
+    color: red;
+}
+.list1{
+    color: rgb(248, 246, 241);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13;
+    margin-left: 1150;
+    float: right; 
+    margin-top: -490;
+
+}
+.list1 ul{
+	padding-top: 20px; position: relative;
+    font-size: 15;
+}
+
+.list1 li {
+	list-style-type:disc;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	
+}
+.list1 h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+}
+.container1
+{
+    text-align: center;
+}
+.glow-on-hover {
+    width: 250px;
+    height: 70px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20;
+    font-weight: bolder;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+    
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg,#fff, #690333, #c20363, #910b6f, #ccd9ff, #809fff,#000099, #001a66, #ff00c8, #ff0000);
+    position: absolute;
+    top: -12.5px;
+    left:-12.5px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 25px);
+    height: calc(100% + 25px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:  url(voice_b.jpg);
+    background-size:cover;
+    -webkit-text-fill-color: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #fffefe;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.capitalize{
+    text-transform: uppercase;
+}
+.heading{
+    color: ivory;
+    font-family: cursive;
+    font-size: 25;
+}
+details > summary {
+    padding: 4px;
+    width: 700px;
+    background-color: transparent;
+    border: none;
+    box-shadow: 2px 2px 5px #fffefe;
+    cursor: pointer;
+  }
+
+  .container,
+  .content {
+    margin: auto;
+  }
+  .container {
+    width: 94.02985075%;
+    max-width: 1260px;
+    padding: 0 2.25em 4em;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(silent_ch_b.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .main-header {
+    text-align: center;
+    padding: 2.8em 0 3.8em;
+  }
+  .cube-container {
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto 4.5em;
+  }
+  /* ---- Page Elements ---- */
+  
+  .name {
+    font-size: 1.65em;
+    font-weight: 800;
+    margin: 0 0 1.5em;
+    line-height: 1;
+    color: rgb(25, 167, 172);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+  }
+  .name span {
+    font-weight: 300;
+    margin-left: -7px;
+  }
+  
+  
+  /* ---- Photo Overlay ---- */
+  
+  .photo-desc {
+    font-size: .85em;
+    color:rgb(226, 95, 160);
+    padding: 1.1em 1em 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(voice_b.jpg);
+  }
+  /* ---- Float clearfix ---- */
+  
+  .clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  
+  /* ================================= 
+    Media Queries
+  ==================================== */
+  
+  @media (min-width: 769px) {
+    .cube-container {
+      float: left;
+      margin-left: 16.6%;
+    }
+  }
+  @media (min-width: 1025px) {
+    .cube-container:first-child {
+      margin-left: 0;
+    }
+    .cube-container:last-child{
+      float: right;
+    }
+    .content {
+      max-width: 900px;
+      margin: auto;
+    }
+  }
+  
+  /* ================================= 
+    Button Transitions
+  ==================================== */
+  
+  .button {
+    transition: background .3s;
+  }
+  .button:hover {
+    background-image: url(attack_b.jpg);
+  }
+  
+  /* ================================= 
+    Photo 3D Transforms & Transitions
+  ==================================== */
+  
+  .cube-container {
+    box-shadow: 0 18px 40px 5px rgba(0,0,0,.4);
+    perspective: 800px;
+  }
+  
+  .photo-cube {
+  transition: transform 2s ease-in-out; 
+    width: 220px;
+    height: 200px;
+    transform-style: preserve-3d;
+  }
+  
+  .photo-cube:hover {
+  transform: rotateY(-270deg);
+  }
+  
+  .front,
+  .back,
+  .left,
+  .right {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  }
+  
+  .front {
+  transform: translate3d(0,0,110px);
+  }
+  
+  .back {
+  transform: translateZ(-110px) rotateY(270deg);
+    transform-origin: center left;
+  }
+  
+  .left {
+  transform: rotateY(-270deg) translate3d(110px, 0, 0);
+    transform-origin: top right;
+  }
+  
+  .right {
+  transform: translateZ(-110px) rotateY(180deg);
+   }
+
+h3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+

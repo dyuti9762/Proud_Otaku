@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.header
+{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(button_b.gif);
+    background-size: cover;
+    background-position:center;
+    align-self: center;
+}
+.navbar-style
+{
+    box-shadow: 0 5px 10px #070101;
+    position: -webkit-sticky !important;
+            position: sticky !important;
+            top: 0 !important;
+            display: flex;
+            padding: 5px 10px 5px 10px;
+            text-align: center;
+}
+.otaku
+{
+    color: rgb(192, 62, 62);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background: url(https://media.giphy.com/media/26ufmyrjQ4BmKN7xe/giphy.gif);
+    background-size: auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 5vw;
+    text-align:center;
+    margin-left: 230;
+    display: flex;
+}
+.click{
+  text-align: center;
+    color: black;
+    font-family:cursive;
+    margin-left: 230;
+}
+body{
+  overflow: hidden;
+}
+
+  ul{
+    position:center;
+    margin:0;
+    padding:0;
+    margin-left: 200;
+  }
+  
+  li{
+    text-align:center;
+    font-family: cursive;
+    font-weight: bold;
+    display:inline-block;
+    list-style:none;
+    position:relative;
+    border:solid 12px #fff;
+    background:#fff;
+    box-shadow:0 0 15px 0px rgb(8, 8, 8);
+    transition:all 1s ease;
+    -o-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    -webkit-transition:all 1s ease;
+    top:50px;
+  }
+  
+  
+  li:hover{
+    top:0px;
+    opacity:0.5;
+  }
+  
+  li:nth-child(1){
+      transform:rotate(10deg);
+  }
+  
+  li:nth-child(2){
+      transform:rotate(-1deg);
+  }
+  
+  li:nth-child(3){
+      transform:rotate(-10deg);
+  }
+  
+  li:nth-child(4){
+      transform:rotate(9deg);
+  }
+  li:nth-child(5){
+    transform:rotate(-10deg);
+}
+  
+  p{
+    margin:-15px 0 0 0;
+  }
+  
+  .light{
+    border-radius:50%;
+    position:absolute;
+    left:0;
+    right:0;
+    width:700px;
+    height:700px;
+    background:#fff;
+    filter:blur(100px);
+    opacity:0.3;
+    pointer-events:none;
+  }
